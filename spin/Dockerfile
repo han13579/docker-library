@@ -1,4 +1,4 @@
-FROM jdehx5qv.mirror.aliyuncs.com/library/ubuntu:18.04
+FROM gcr.io/spinnaker-marketplace/halyard:1.32.0
 MAINTAINER yxf788@gmail.com
 ADD InstallHalyard.sh /
 RUN sleep 35 \
