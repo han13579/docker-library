@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM jdehx5qv.mirror.aliyuncs.com/library/ubuntu:18.04
 MAINTAINER yxf788@gmail.com
 ADD InstallHalyard.sh /
 RUN chmod +x /InstallHalyard.sh \
