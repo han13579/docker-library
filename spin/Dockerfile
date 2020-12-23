@@ -1,7 +1,7 @@
 FROM gcr.io/spinnaker-marketplace/halyard:1.32.0
 MAINTAINER yxf788@gmail.com
 
-RUN nohup /opt/halyard/bin/halyard >> /tmp/a &
+entrypoint [/opt/halyard/bin/halyard] 
 RUN ps -ef; \ 
     sleep 45; \
 	ps -ef; \ 
