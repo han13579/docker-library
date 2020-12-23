@@ -1,6 +1,6 @@
 FROM gcr.io/spinnaker-marketplace/halyard:1.32.0
 MAINTAINER yxf788@gmail.com
-RUN /opt/halyard/bin/halyard \
+RUN nohup /opt/halyard/bin/halyard >> /tmp/spin.log \
     && sleep 61 \
 	&& hal -v \ 
     && hal version list \
