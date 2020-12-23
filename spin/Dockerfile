@@ -1,8 +1,10 @@
-FROM gcr.io/spinnaker-marketplace/halyard:1.32.0
+FROM ubuntu:18.04
 MAINTAINER yxf788@gmail.com
-RUN nohup /opt/halyard/bin/halyard >> /tmp/spin.log
-RUN sleep 50 \ 
-    && hal -v \ 
-    && hal version list \
+ADD InstallHalyard.sh /
+RUN chmod +x /InstallHalyard.sh \
+    && sudo bash InstallHalyard.sh --user runner -y \
+	&& sleep 5 \
+	&& hal -v 
+RUN hal version list \
     && hal version bom 1.24.1 -q -o yaml >  1.24.1.yml
 
