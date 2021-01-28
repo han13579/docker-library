@@ -1,2 +1,2 @@
-FROM gcr.io/spinnaker-marketplace/halyard:1.32.0
+FROM us-docker.pkg.dev/spinnaker-community/docker/halyard:stable
 MAINTAINER yxf788@gmail.com
